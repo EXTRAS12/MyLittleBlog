@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.contrib import messages
+from django.contrib.auth.views import LoginView
 from django.core.mail import send_mail
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -47,3 +48,7 @@ def activateemail(request):
         return HttpResponse('The user is now activated. You can go ahead and log in!')
     else:
         return HttpResponse('The parameters is not valid!')
+
+
+class Login(LoginView):
+    template_name = "registration/login.html"
