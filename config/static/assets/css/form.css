@@ -59,7 +59,6 @@
     background-color: rgb(88, 56, 250);
 }
 
-
 @media screen and (max-width: 500px){
     .form .column {
         flex-wrap: wrap;
