@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
 {% block content %}
 <article>
     <section class="section recent" aria-label="recent post">
@@ -36,9 +36,9 @@
 
                     </ul>
                     <div style="justify-content: space-between; color: #949599; margin: 10px;">
-                        <small>Автор: <strong><a href="#">EXTRA</a></strong></small>
-                        <small>Просмотров: <strong>{{ post_detail.views }}</strong></small>
-                        <small>Дата публикации: <strong>{{ post_detail.created_at|date }}</strong></small>
+                        <small>{% trans 'Автор:' %} <strong><a href="#">EXTRA</a></strong></small>
+                        <small>{% trans 'Просмотров:' %} <strong>{{ post_detail.views }}</strong></small>
+                        <small>{% trans 'Дата публикации:' %} <strong>{{ post_detail.created_at|date }}</strong></small>
                     </div>
                     <p class="post-content" style="padding-top: 8px;">
                         {{post_detail.content|safe}}

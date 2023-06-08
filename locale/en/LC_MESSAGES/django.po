@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-08 15:41+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: main/templates/main/frontpage.html:14
+msgid "Hey, we’re Blogy."
+msgstr "Huy, our Blog"
+
+#: main/templates/main/frontpage.html:14
+msgid "See our thoughts, stories and ideas."
+msgstr ""
+
+#: main/templates/main/frontpage.html:22 main/templates/main/frontpage.html:774
+msgid "Subscribe"
+msgstr ""
+
+#: main/templates/main/frontpage.html:26
+msgid ""
+"Get the email newsletter and unlock access to members-only content and "
+"updates"
+msgstr ""
+
+#: main/templates/main/frontpage.html:46
+msgid "Get started with our"
+msgstr ""
+
+#: main/templates/main/frontpage.html:46
+msgid "best stories"
+msgstr ""
+
+#: main/templates/main/frontpage.html:411
+#: main/templates/main/post_by_tag.html:11
+#: search/templates/search/search_list.html:11
+msgid "See what we’ve"
+msgstr ""
+
+#: main/templates/main/frontpage.html:411
+msgid "written lately"
+msgstr ""
+
+#: main/templates/main/frontpage.html:523
+msgid "Посмотреть все"
+msgstr ""
+
+#: main/templates/main/frontpage.html:540
+msgid "Recommended"
+msgstr ""
+
+#: main/templates/main/frontpage.html:768
+msgid "Subscribe to"
+msgstr ""
+
+#: main/templates/main/frontpage.html:768
+msgid "new posts"
+msgstr ""
+
+#: main/templates/main/post_detail.html:39
+msgid "Автор:"
+msgstr ""
+
+#: main/templates/main/post_detail.html:40
+msgid "Просмотров:"
+msgstr ""
+
+#: main/templates/main/post_detail.html:41
+msgid "Дата публикации:"
+msgstr ""
+
+#: main/templates/main/post_list.html:11
+msgid "Все посты"
+msgstr ""
+
+#: templates/base.html:13
+msgid "Blogy - Hey, we’re Blogy. See our thoughts, stories and ideas."
+msgstr ""
+
+#: templates/inc/footer.html:18
+msgid ""
+"A minimal, functional theme for running a paid-membership publication on "
+"Ghost."
+msgstr ""
+
+#: templates/inc/footer.html:26
+msgid "Social"
+msgstr ""
+
+#: templates/inc/footer.html:58
+msgid "About"
+msgstr ""
+
+#: templates/inc/footer.html:86
+msgid "Features"
+msgstr ""
+
+#: templates/inc/footer.html:114
+msgid "Membership"
+msgstr ""

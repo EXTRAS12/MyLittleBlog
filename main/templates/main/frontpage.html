@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static i18n %}
 {% block content %}
 <article>
 
@@ -11,7 +11,7 @@
         <div class="container">
 
             <h1 class="h1 hero-title">
-                <strong class="strong">Hey, we’re Blogy.</strong> See our thoughts, stories and ideas.
+                <strong class="strong">{% trans 'Hey, we’re Blogy.' %}</strong>{% trans 'See our thoughts, stories and ideas.' %}
             </h1>
 
             <div class="wrapper">
@@ -19,11 +19,11 @@
                 <form action="" class="newsletter-form">
                     <input type="email" name="email_address" placeholder="Your email address" class="email-field">
 
-                    <button type="submit" class="btn">Subscribe</button>
+                    <button type="submit" class="btn">{% trans 'Subscribe' %}</button>
                 </form>
 
                 <p class="newsletter-text">
-                    Get the email newsletter and unlock access to members-only content and updates
+                   {% trans 'Get the email newsletter and unlock access to members-only content and updates' %}
                 </p>
 
             </div>
@@ -43,7 +43,7 @@
         <div class="container">
 
             <p class="section-subtitle">
-                Get started with our <strong class="strong">best stories</strong>
+                {% trans 'Get started with our' %} <strong class="strong">{% trans 'best stories' %}</strong>
             </p>
 
             <ul class="has-scrollbar">
@@ -408,7 +408,7 @@
             <div class="title-wrapper">
 
                 <h2 class="h2 section-title">
-                    See what we’ve <strong class="strong">written lately</strong>
+                   {% trans 'See what we’ve' %}  <strong class="strong">{% trans 'written lately' %}</strong>
                 </h2>
 
                 <div class="top-author">
@@ -520,7 +520,7 @@
 
             </ul>
 
-            <button class="btn"><a href="{% url 'post_list' %}">Посмотреть все</a></button>
+            <button class="btn"><a href="{% url 'post_list' %}">{% trans 'Посмотреть все' %}</a></button>
 
         </div>
     </section>
@@ -537,7 +537,7 @@
         <div class="container">
 
             <p class="section-subtitle">
-                <strong class="strong">Recommended</strong>
+                <strong class="strong">{% trans 'Recommended' %}</strong>
             </p>
 
             <ul class="grid-list">
@@ -765,13 +765,13 @@
     <section class="section newsletter">
 
         <h2 class="h2 section-title">
-            Subscribe to <strong class="strong">new posts</strong>
+            {% trans 'Subscribe to' %} <strong class="strong">{% trans 'new posts' %}</strong>
         </h2>
 
         <form action="" class="newsletter-form">
             <input type="email" name="email_address" placeholder="Your email address" required class="email-field">
 
-            <button type="submit" class="btn">Subscribe</button>
+            <button type="submit" class="btn">{% trans 'Subscribe' %}</button>
         </form>
 
     </section>

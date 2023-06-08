@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load i18n %}
 {% block content %}
 <article>
     <section class="section recent" aria-label="recent post">
@@ -8,7 +8,7 @@
             <div class="title-wrapper">
 
                 <h2 class="h2 section-title">
-                    See what we’ve <strong class="strong">written lately</strong>
+                    {% trans 'See what we’ve' %}
                 </h2>
 
 

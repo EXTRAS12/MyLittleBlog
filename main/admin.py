@@ -1,20 +1,22 @@
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 from django import forms
 from django.contrib import admin
+from modeltranslation.admin import TranslationAdmin
 
 from .models import Post, Tag
 
 
 class PostAdminForm(forms.ModelForm):
     """Форма для контента ckeditor"""
-    content = forms.CharField(widget=CKEditorUploadingWidget())
+    content_ru = forms.CharField(widget=CKEditorUploadingWidget())
+    content_en = forms.CharField(widget=CKEditorUploadingWidget())
 
     class Meta:
         model = Post
         fields = '__all__'
 
 
-class PostAdmin(admin.ModelAdmin):
+class PostAdmin(TranslationAdmin):
     list_display = ('id', 'title', 'is_published', 'updated_at', 'created_at', 'views')
     prepopulated_fields = {'slug': ('title',)}
     list_display_links = ('id', 'title')
@@ -25,7 +27,7 @@ class PostAdmin(admin.ModelAdmin):
     readonly_fields = ('views', 'created_at', 'updated_at')
 
 
-class TagAdmin(admin.ModelAdmin):
+class TagAdmin(TranslationAdmin):
     """Для тэгов"""
     prepopulated_fields = {"slug": ("title",)}
 

@@ -51,4 +51,4 @@ def activateemail(request):
 
 
 class Login(LoginView):
-    template_name = "registration/login.html"
+    template_name = 'registration/login.html'

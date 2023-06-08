@@ -1,4 +1,4 @@
-{% load static %}
+{% load static i18n %}
 <!--
     - #FOOTER
   -->
@@ -15,7 +15,7 @@
                 </a>
 
                 <p class="footer-text">
-                    A minimal, functional theme for running a paid-membership publication on Ghost.
+                    {% trans 'A minimal, functional theme for running a paid-membership publication on Ghost.' %}
                 </p>
 
             </div>
@@ -23,7 +23,7 @@
             <ul class="footer-list">
 
                 <li>
-                    <p class="h5">Social</p>
+                    <p class="h5">{% trans 'Social' %}</p>
                 </li>
 
                 <li class="footer-list-item">
@@ -55,7 +55,7 @@
             <ul class="footer-list">
 
                 <li>
-                    <p class="h5">About</p>
+                    <p class="h5">{% trans 'About' %}</p>
                 </li>
 
                 <li>
@@ -83,7 +83,7 @@
             <ul class="footer-list">
 
                 <li>
-                    <p class="h5">Features</p>
+                    <p class="h5">{% trans 'Features' %}</p>
                 </li>
 
                 <li>
@@ -111,7 +111,7 @@
             <ul class="footer-list">
 
                 <li>
-                    <p class="h5">Membership</p>
+                    <p class="h5">{% trans 'Membership' %}</p>
                 </li>
 
                 <li>
@@ -141,7 +141,7 @@
         <div class="section footer-bottom">
 
             <p class="copyright">
-                &copy; Blogy 2022. Published by <a href="#" class="copyright-link hover:underline">codewithsadee</a>.
+                &copy; Blogy 2022. Published by <a href="#" class="copyright-link hover:underline">EXTRA</a>.
             </p>
 
         </div>
