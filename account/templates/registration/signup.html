@@ -4,16 +4,31 @@
 {% block content %}
 <article>
     <section class="section recent" aria-label="recent post">
-        <div class="container">
+        <div class="container-form">
+            <h3>Registration Form</h3>
 
-            <form method="post" action=".">
-                {% csrf_token %}
-
-                {{ form.as_p }}
-                <button>Submit</button>
+            <form action="." class="form">
+                <div class="input-box">
+                    <label>Name</label>
+                    <input type="text" placeholder="Enter your name" required/>
+                </div>
+                <div class="input-box">
+                    <label>Email Address</label>
+                    <input type="text" placeholder="Enter your email" required/>
+                </div>
+                <div class="column">
+                <div class="input-box">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter password" required/>
+                </div>
+                <div class="input-box">
+                    <label>Password2</label>
+                    <input type="password" placeholder="Enter password2" required/>
+                </div>
+                </div>
+            <button>Submit</button>
             </form>
-
-        </div>
+            </div>
     </section>
 </article>
 {% endblock %}
