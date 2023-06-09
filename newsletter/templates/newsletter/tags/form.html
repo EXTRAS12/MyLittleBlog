@@ -1,0 +1,7 @@
+{% load i18n %}
+<form action="{% url 'sub' %}" method="post" class="newsletter-form">
+    {% csrf_token %}
+    <input type="email" name="email" placeholder="Your email address" class="email-field">
+
+    <button type="submit" class="btn">{% trans 'Subscribe' %}</button>
+</form>

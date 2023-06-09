@@ -15,6 +15,7 @@ urlpatterns += i18n_patterns(
     path('', include('main.urls')),
     path('search/', include('search.urls')),
     path('', include('account.urls')),
+    path('newsletter/', include('newsletter.urls')),
 )
 
 if settings.DEBUG:
