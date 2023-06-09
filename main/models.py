@@ -4,6 +4,8 @@ from django.db import models
 from django.urls import reverse
 from pytils.translit import slugify
 
+from account.models import User
+
 
 def gen_slug(q):
     """Генератор слагов от времени"""
@@ -15,6 +17,8 @@ class Post(models.Model):
     title = models.CharField(max_length=250, verbose_name='Наименование')
     slug = models.SlugField(max_length=250, db_index=True, unique=True, blank=True)
     content = models.TextField(blank=True, verbose_name='Контент')
+    author = models.ForeignKey(User, on_delete=models.CASCADE,
+                               max_length=100, blank=True, null=True, verbose_name='Имя автора')
     image = models.ImageField(upload_to='images/%Y/', verbose_name='Изображение', blank=True)
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата публикации')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Обновлено')
