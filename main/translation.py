@@ -5,7 +5,7 @@ from .models import Post, Tag
 
 @register(Tag)
 class TagTranslationOptions(TranslationOptions):
-    fields = ('title',)
+    fields = ('title', 'description',)
 
 
 @register(Post)

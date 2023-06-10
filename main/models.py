@@ -46,6 +46,7 @@ class Post(models.Model):
 class Tag(models.Model):
     title = models.CharField(max_length=50, db_index=True, verbose_name='Имя тэга')
     slug = models.SlugField(max_length=50, db_index=True, unique=True)
+    description = models.TextField(default='')
 
     class Meta:
         verbose_name = 'Тэг'

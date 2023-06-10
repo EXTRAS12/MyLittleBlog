@@ -1,5 +1,16 @@
 {% extends 'base.html' %}
 {% load i18n %}
+{% block meta %}
+<meta name="description" content="Detailed tag information">
+<meta name="author" content="">
+<meta property="og:title" content="{{ tag.title }}">
+<meta property="og:description" content="{{ tag.description }}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="">
+
+
+{% endblock %}
+
 {% block content %}
 <article>
     <section class="section recent" aria-label="recent post">
