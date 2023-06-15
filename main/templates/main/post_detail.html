@@ -6,10 +6,10 @@
         <div class="container">
             <div class="title-wrapper">
 
-                <h2 class="h3 section-title">
+                <h1 class="h3 section-title">
                     {{post_detail.title}}
 
-                </h2>
+                </h1>
                 <div class="top-author">
                     <ul class="avatar-list">
 
@@ -36,7 +36,7 @@
 
                     </ul>
                     <div style="justify-content: space-between; color: #949599; margin: 10px;">
-                        <small>{% trans 'Автор:' %} <strong><a href="#">EXTRA</a></strong></small>
+                        <small>{% trans 'Автор:' %} <strong><a href="#">{{ post_detail.author.name }}</a></strong></small>
                         <small>{% trans 'Просмотров:' %} <strong>{{ post_detail.views }}</strong></small>
                         <small>{% trans 'Дата публикации:' %} <strong>{{ post_detail.created_at|date }}</strong></small>
                     </div>

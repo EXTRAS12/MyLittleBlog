@@ -1,7 +1,10 @@
 {% load i18n %}
 <form action="{% url 'sub' %}" method="post" class="newsletter-form">
     {% csrf_token %}
-    <input type="email" name="email" placeholder="Your email address" class="email-field">
+    <input type="email" name="email" placeholder="{% trans 'Ваш email адресс' %}" class="email-field">
 
-    <button type="submit" class="btn">{% trans 'Subscribe' %}</button>
+    <button type="submit" class="btn">{% trans 'Подписаться' %}</button>
 </form>
+<p class="newsletter-text">
+    {% trans 'Откройте доступ к материалам и обновлениям, доступным только для членов клуба.' %}
+ </p>

@@ -7,22 +7,20 @@
             <img src="{% static 'assets/images/logo.svg' %}" width="129" height="40" alt="Blogy logo">
         </a>
 
+
         <nav class="navbar" data-navbar>
             <ul class="navbar-list">
 
                 <li class="navbar-item">
-                    <a href="/" class="navbar-link hover:underline" data-nav-link>Home</a>
+                    <a href="/" class="navbar-link hover:underline" data-nav-link>{% trans 'Главная' %}</a>
                 </li>
 
                 <li class="navbar-item">
-                    <a href="#" class="navbar-link hover:underline" data-nav-link>Recent Post</a>
-                </li>
-
-                <li class="navbar-item">
-                    <a href="#" class="navbar-link hover:underline" data-nav-link>Membership</a>
+                    <a href="{% url 'post_list' %}" class="navbar-link hover:underline" data-nav-link>{% trans 'Все посты' %}</a>
                 </li>
                 <li class="navbar-item">
-                    <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                    <form style="text-align: right; display: flex;
+                    padding: 5px;" action="{% url 'set_language' %}" method="post">{% csrf_token %}
                         <input name="next" type="hidden" value="{{ redirect_to }}">
                         <select name="language">
                             {% get_current_language as LANGUAGE_CODE %}
@@ -35,8 +33,12 @@
                                 </option>
                             {% endfor %}
                         </select>
-                        <input type="submit" value="Go">
+                        <input style="text-align: right;" type="submit" value="Go">
                     </form>
+                </li>
+
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link hover:underline" data-nav-link>Membership</a>
                 </li>
 
             </ul>
@@ -47,7 +49,7 @@
             <button class="search-btn" aria-label="search" data-search-toggler>
                 <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
 
-                <span class="span">Search</span>
+                <span class="span">{% trans 'Поиск' %}</span>
             </button>
 
             <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
@@ -56,10 +58,11 @@
                 <span class="span three"></span>
             </button>
             {% if user.is_authenticated %}
-            <a href="{% url 'logout' %}" style="background-color: red;" class="btn">Logout</a>
+            <a href="{% url 'logout' %}" style="background-color: red;" class="btn">{% trans 'Выйти' %}</a>
             {% else %}
-            <a href="{% url 'login' %}" class="btn">Join</a>
+            <a href="{% url 'login' %}" class="btn">{% trans 'Войти' %}</a>
             {% endif %}
+
         </div>
 
     </div>
@@ -73,7 +76,7 @@
 
     <div class="input-wrapper">
         <form action="{% url 'search' %}" method="get">
-            <input type="text" name="s" placeholder="Search" class="input-field">
+            <input type="text" name="s" placeholder="{% trans 'Поиск' %}" class="input-field">
 
             <button class="search-close-btn" aria-label="close search bar" data-search-toggler>
                 <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
@@ -81,7 +84,7 @@
         </form>
     </div>
 
-    <p class="search-bar-text">Please enter at least 3 characters</p>
+    <p class="search-bar-text">{% trans 'Пожалуйста, введите не менее 3 символов' %}</p>
 
 </div>
 
