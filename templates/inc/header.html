@@ -1,5 +1,6 @@
-{% load static %}
+{% load static flatpages %}
 {% load i18n %}
+
 <header class="header section" data-header>
     <div class="container">
 
@@ -38,7 +39,7 @@
                 </li>
 
                 <li class="navbar-item">
-                    <a href="#" class="navbar-link hover:underline" data-nav-link>Membership</a>
+                    <a href="/about/" class="navbar-link hover:underline" data-nav-link>{% trans 'О нас' %}</a>
                 </li>
 
             </ul>

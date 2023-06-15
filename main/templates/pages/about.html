@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% block content %}
+<article>
+    <section class="section recent" aria-label="recent post">
+        <div class="container">
+            <div class="title-wrapper">
+
+                <h1 class="h3 section-title">
+                    {{flatpage.title}}
+
+                </h1>
+            </div>
+            <div class="blog-card">
+
+                <div class="card-content">
+                    <p class="post-content" style="padding-top: 8px;">
+                        {{flatpage.newflatpage.description|safe}}
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="blog-card">
+
+                <div class="card-content">
+                    <p class="post-content" style="padding-top: 8px;">
+                        {{flatpage.newflatpage.text_block|safe}}
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+</article>
+{% endblock %}

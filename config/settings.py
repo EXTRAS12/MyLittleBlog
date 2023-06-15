@@ -36,6 +36,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'django.contrib.sites',
+    'django.contrib.flatpages',
+
     'ckeditor',
     'ckeditor_uploader',
 
@@ -55,6 +58,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -115,6 +119,8 @@ LANGUAGES = (
     ('ru', gettext('Russia')),
     ('en', gettext('English')),
 )
+
+SITE_ID = 1
 
 LOCALE_PATHS = (BASE_DIR / 'locale'),
 

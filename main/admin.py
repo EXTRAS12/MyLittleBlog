@@ -1,9 +1,28 @@
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 from django import forms
 from django.contrib import admin
+from django.contrib.flatpages.admin import FlatPageAdmin
 from modeltranslation.admin import TranslationAdmin
 
-from .models import Post, Tag
+from .models import FlatPage, NewFlatpage, Post, Tag
+
+
+class NewFlatpageInline(admin.StackedInline):
+    model = NewFlatpage
+    verbose_name = "Содержание"
+
+
+class FlatPageNewAdmin(FlatPageAdmin, TranslationAdmin):
+    inlines = [NewFlatpageInline]
+    fieldsets = (
+        (None, {'fields': ('url', 'title', 'sites')}),
+        (('Advanced options'), {
+            'fields': ('template_name',),
+        }),
+    )
+    list_display = ('url', 'title')
+    list_filter = ('sites', 'registration_required')
+    search_fields = ('url', 'title')
 
 
 class PostAdminForm(forms.ModelForm):
@@ -34,6 +53,9 @@ class TagAdmin(TranslationAdmin):
 
 admin.site.register(Post, PostAdmin)
 admin.site.register(Tag, TagAdmin)
+
+admin.site.unregister(FlatPage)
+admin.site.register(FlatPage, FlatPageNewAdmin)
 
 admin.site.site_title = 'Управление публикациями'
 admin.site.site_header = 'Управление публикациями'
